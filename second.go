@@ -1,20 +1,38 @@
 package main
 
-// find average given function parameters 
-// no return statments allowed
-func average(a, b, c int){
+import "fmt"
 
-	average := a+b/2
-	
+// find average given function parameters
+// no return statments allowed
+func average(a, b, c int) {
+
+	average := (a + b + c) / 3
+	fmt.Println("Average = ", average)
+
 }
 
 // find min and maxmimum from the given function parameters
-// 
-func min_max(a, b, c int) (int, int){
+func min_max(a, b, c int) (int, int) {
 
-	min := 0
-	max := 0
+	min := a
+	max := a
 
-	
-	return min
+	// Find the minimum value
+	if b < min {
+		min = b
+	}
+	if c < min {
+		min = c
+	}
+
+	// Find the maximum value
+	if b > max {
+		max = b
+	}
+	if c > max {
+		max = c
+	}
+
+	return min, max
+
 }
